@@ -49,6 +49,7 @@ var IssueGroupCategories = []string{
 	"Mobile",
 	"Ai_Detected",
 	"Preprod",
+	"Configuration",
 }
 
 // https://github.com/getsentry/sentry/blob/master/src/sentry/issues/grouptype.py
@@ -70,6 +71,7 @@ var IssueGroupCategoryNameToId = map[string]string{
 	"Mobile":            "15",
 	"Ai_Detected":       "16",
 	"Preprod":           "17",
+	"Configuration":     "19",
 }
 
 // https://github.com/getsentry/sentry/blob/master/src/sentry/issues/grouptype.py
@@ -91,6 +93,7 @@ var IssueGroupCategoryIdToName = map[string]string{
 	"15": "Mobile",
 	"16": "Ai_Detected",
 	"17": "Preprod",
+	"19": "Configuration",
 }
 
 // https://github.com/getsentry/sentry/blob/master/src/sentry/rules/conditions/event_attribute.py
@@ -204,19 +207,24 @@ var DashboardWidgetTypes = []string{
 	"spans",
 	"logs",
 	"tracemetrics",
-	"mobile-app-size",
+	"preprod-app-size",
 }
 
 // https://github.com/getsentry/sentry/blob/master/src/sentry/models/dashboard_widget.py
 var DashboardWidgetDisplayTypes = []string{
 	"line",
 	"area",
-	"stacked_area",
 	"bar",
 	"table",
 	"big_number",
-	"top_n",
 	"details",
+	"categorical_bar",
+	"wheel",
+	"rage_and_dead_clicks",
+	"server_tree",
+	"text",
+	"agents_traces_table",
+	"heatmap",
 }
 
 // https://github.com/getsentry/sentry/blob/master/src/sentry/models/project.py
@@ -311,6 +319,7 @@ var Platforms = []string{
 	"python-fastapi",
 	"python-flask",
 	"python-gcpfunctions",
+	"python-litestar",
 	"python-pylons",
 	"python-pymongo",
 	"python-pyramid",
